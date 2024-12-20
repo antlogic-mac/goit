@@ -1,0 +1,9 @@
+# This is a TLS certification configuration for MariaDB (ex-MySQL) server.
+# Certificates are required for the safe connection from the outer world. 
+
+[mysqld]
+ssl
+ssl-ca=/certs/ca.crt
+ssl-cert=/certs/mysql.crt
+ssl-key=/certs/mysql.key
+require_secure_transport=ON
