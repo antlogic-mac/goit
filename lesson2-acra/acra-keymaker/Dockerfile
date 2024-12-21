@@ -34,5 +34,8 @@ RUN apt-get update && apt-get install -y \
 # Copy key generation script to the image
 COPY /keygen.sh /keygen.sh
 
+# Add volumes with keys
+VOLUME ["/keys"]
+
 # Set the default command to the key generation script
 CMD ["/keygen.sh"]

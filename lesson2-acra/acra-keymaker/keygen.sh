@@ -3,7 +3,7 @@
 # Would be copied to the local filesystem via the attached volume /keys
 
 # Cleanup the keys directory
-rm -rf /keys/*
+rm -rf /keys/* /keys/.poison_key/*
 # Set correct permissions for the folder
 chmod 700 /keys
 # Generate the master key
