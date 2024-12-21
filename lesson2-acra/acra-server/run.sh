@@ -7,6 +7,7 @@ docker run -it \
   -v "$(pwd)/config:/config" \
   -v "$(pwd)/data:/data" \
   -p 9393:9393 \
+  --network acra \
   acra-server-image \
   --token_db=/data/token.db \
   --keys_dir=/data/acra-server \

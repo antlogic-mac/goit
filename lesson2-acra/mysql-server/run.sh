@@ -7,4 +7,6 @@ docker run -it \
   -e MYSQL_USER=acra_test \
   -e MYSQL_PASSWORD=password \
   -e MYSQL_DATABASE=acra_test_db \
+  --name mysql \
+  --network acra \
   mysql-server-acra-image
