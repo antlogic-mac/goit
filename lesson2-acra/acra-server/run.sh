@@ -1,5 +1,5 @@
 #! /bin/sh
-# Run a Docker container with acra-server, mounting all the required folder and specifying all the required parameters.
+# Run a Docker container with acra-server, mounting all the required folders and specifying all the required parameters.
 
 docker run -it \
   -v "$(pwd)/../acra-keymaker/keys:/keys" \
