@@ -1,0 +1,83 @@
+services:
+  mysql:
+    build:
+      # Context is the parent folder, so all paths are relative to it
+      context: ..
+      dockerfile: ./mysql-server/Dockerfile
+    environment:
+      - MYSQL_RANDOM_ROOT_PASSWORD=yes
+      - MYSQL_USER=acra
+      - MYSQL_PASSWORD=password
+      - MYSQL_DATABASE=acra_test_db
+    networks:
+      - acra-intranet
+  acra-server:
+    build:
+      context: ../acra-server
+      dockerfile: ./Dockerfile
+    # Parameters which are passed to the acra-server.sh
+    command: |
+      --token_db=/data/token.db
+      --keys_dir=/keys
+      --http_api_enable
+      --tls_auth=4
+      --tls_ca=/certificates/ca.crt
+      --tls_cert=/certificates/acra-server.crt
+      --tls_key=/certificates/acra-server.key
+      --tls_client_id_from_cert
+      --tls_identifier_extractor_type=distinguished_name
+      --incoming_connection_api_string=tcp://0.0.0.0:9090
+      --incoming_connection_string=tcp://0.0.0.0:9393
+      --v
+      --tls_ocsp_from_cert=ignore
+      --tls_crl_from_cert=ignore
+      --config_file=/config/acra-server.yaml
+    volumes:
+      - ../certificates/data:/certificates
+      - ../acra-keymaker/keys:/keys
+      - ../acra-server/config:/config
+      - ../acra-server/data:/data
+    ports:
+      - "9393:9393"
+    networks:
+      - acra-intranet
+      - acra-extranet
+    depends_on:
+      - mysql
+  phpmyadmin:
+    image: phpmyadmin
+    networks:
+      - acra-extranet
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: acra-server
+      PMA_PORT: 9393
+      PMA_SSL: "true"
+      PMA_SSL_CA: "/certificates/ca.crt"
+      PMA_SSL_CERT: "/certificates/acra-client.crt"
+      PMA_SSL_KEY: "/certificates/acra-client.key"
+    volumes:
+      - ../certificates/data:/certificates
+      #- ./config.user.inc.php:/etc/phpmyadmin/config.user.inc.php
+    depends_on:
+      - acra-server
+      - mysql
+  phpmyadmin2:
+    image: phpmyadmin
+    networks:
+      - acra-intranet
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+    volumes:
+      - ../certificates/data:/certificates
+    depends_on:
+      - mysql
+networks:
+  acra-intranet:
+    driver: bridge
+  acra-extranet:
+    driver: bridge

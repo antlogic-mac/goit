@@ -12,7 +12,12 @@ So this achieves three main goals:
 
 ## Main steps for Acra server setup
 
-- TLS certificate generation: this is needed to setup secure connection between clients
+It is recommended to split learning of the subject to the following steps:
+- TLS certificate generation: this is needed to setup secure connection between the client, Acra server and database server.
+- Acra key generation: there is a bunch of key types so this is needed to understand what keys are used and for which purpose they are used.
+- MySQL server setup: TLS certificate configuration.
+- Acra server setup: server configuration, database encryption configuration, etc.
+- Finally, docker-compose setup allowing to run all the previous steps together.
 
 ## Contents
 

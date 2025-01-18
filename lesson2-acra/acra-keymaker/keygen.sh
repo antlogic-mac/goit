@@ -13,3 +13,8 @@ ACRA_MASTER_KEY="$(base64 < /keys/master.key)"
 export ACRA_MASTER_KEY
 # Generate all sorts of keys for the client Charlie
 acra-keymaker --client_id=charlie --keys_output_dir=/keys --keys_public_output_dir=/keys
+# Extract client id from the certificate
+CLIENT=$(acra-keys extract-client-id --tls_client_id_cert=/certificates/acra-client.crt --tls_identifier_extractor_type=distinguished_name)
+# Generate keys for the client certificate
+acra-keymaker --client_id="${CLIENT}" --keys_output_dir=/keys --keys_public_output_dir=/keys
+#acra-keymaker --keystore=v1 --keys_output_dir=/keys --keys_public_output_dir=/keys generate --tls_client_id_cert /certificates/acra-client.crt

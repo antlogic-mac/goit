@@ -1,0 +1,14 @@
+$i = 0;
+$cfg['Servers'][$i]['host'] = 'acra-server';
+$cfg['Servers'][$i]['ssl'] = true;
+$cfg['Servers'][$i]['ssl_key'] = '/certificates/acra-client.key';
+$cfg['Servers'][$i]['ssl_cert'] = '/certificates/acra-client.crt';
+$cfg['Servers'][$i]['ssl_ca'] = '/certificates/ca.crt';
+$cfg['Servers'][$i]['ssl_verify'] = true;
+$i = 1;
+$cfg['Servers'][$i]['host'] = 'mysql';
+$cfg['Servers'][$i]['ssl'] = true;
+$cfg['Servers'][$i]['ssl_key'] = '/certificates/acra-client.key';
+$cfg['Servers'][$i]['ssl_cert'] = '/certificates/acra-client.crt';
+$cfg['Servers'][$i]['ssl_ca'] = '/certificates/ca.crt';
+$cfg['Servers'][$i]['ssl_verify'] = true;
