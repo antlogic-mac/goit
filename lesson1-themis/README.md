@@ -7,6 +7,9 @@ This repository contains the necessary files and scripts to build and run a Dock
 - `Dockerfile`: The Dockerfile for building the Themis container. If you are not familiar with Docker yet, please see the following link for reference: https://docs.docker.com/reference/dockerfile/
 - `build.sh`: A script to build the Docker container. Consult Docker command line reference for the details.
 - `run.sh`: A script to run the container interactively, mounting a local directory with sample Python scripts. Consult Docker command line reference for the details.
+- `keygen.py`: A script which generates public/private keypair and writes to /tmp folder.
+- `symenc.py`: A script which uses password-based encryption to encrypt sample message.
+- `symdec.py`: A script which decrypts sample message using the password.
 
 ## Prerequisites
 

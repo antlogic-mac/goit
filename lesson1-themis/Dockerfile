@@ -21,6 +21,7 @@ RUN apt-get update && apt-get install -y \
     software-properties-common \
     bsdmainutils \
     dumpasn1 \
+    micro \
     && rm -rf /var/lib/apt/lists/*
 
 # Add the Cossack Labs APT repository key

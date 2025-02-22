@@ -9,5 +9,3 @@ encrypted = cell.encrypt(plaintext, context)
 
 with open("/tmp/encrypted.bin", "wb") as file:
     file.write(encrypted)
-
-
