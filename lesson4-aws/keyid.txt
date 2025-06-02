@@ -1,0 +1,1 @@
+arn:aws:kms:eu-north-1:947185589162:key/ea3a9663-f047-4b0f-bce2-9a82d2b1f7af

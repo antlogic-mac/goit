@@ -1,0 +1,78 @@
+SEQUENCE
+  SEQUENCE
+    [0]
+      INTEGER 02
+    INTEGER 1b30cdd65534b37a61eda4e4307e6c91fe5f77e9
+    SEQUENCE
+      ObjectIdentifier (1 3 101 112)
+    SEQUENCE
+      SET
+        SEQUENCE
+          ObjectIdentifier countryName (2 5 4 6)
+          PrintableString 'UA'
+      SET
+        SEQUENCE
+          ObjectIdentifier stateOrProvinceName (2 5 4 8)
+          UTF8String 'Kyiv'
+      SET
+        SEQUENCE
+          ObjectIdentifier localityName (2 5 4 7)
+          UTF8String 'Kyiv'
+      SET
+        SEQUENCE
+          ObjectIdentifier organizationName (2 5 4 10)
+          UTF8String 'Goit'
+      SET
+        SEQUENCE
+          ObjectIdentifier organizationalUnitName (2 5 4 11)
+          UTF8String 'IT'
+      SET
+        SEQUENCE
+          ObjectIdentifier commonName (2 5 4 3)
+          UTF8String 'Test CA Cert'
+    SEQUENCE
+      UTCTime 250308153941Z
+      UTCTime 270308153941Z
+    SEQUENCE
+      SET
+        SEQUENCE
+          ObjectIdentifier countryName (2 5 4 6)
+          PrintableString 'UA'
+      SET
+        SEQUENCE
+          ObjectIdentifier stateOrProvinceName (2 5 4 8)
+          UTF8String 'Kyiv'
+      SET
+        SEQUENCE
+          ObjectIdentifier localityName (2 5 4 7)
+          UTF8String 'Kyiv'
+      SET
+        SEQUENCE
+          ObjectIdentifier organizationName (2 5 4 10)
+          UTF8String 'Goit'
+      SET
+        SEQUENCE
+          ObjectIdentifier organizationalUnitName (2 5 4 11)
+          UTF8String 'IT'
+      SET
+        SEQUENCE
+          ObjectIdentifier commonName (2 5 4 3)
+          UTF8String 'Test Node Cert (acra-client)'
+    SEQUENCE
+      SEQUENCE
+        ObjectIdentifier (1 3 101 112)
+      BITSTRING 001a0f6d3033aed5d945a77d3dc4fa89..(total 33bytes)..5c2fa13b6b2fdf56b179d0d1af36f395
+    [3]
+      SEQUENCE
+        SEQUENCE
+          ObjectIdentifier subjectKeyIdentifier (2 5 29 14)
+          OCTETSTRING, encapsulates
+            OCTETSTRING b7ef1912f3eb959f17d3baa4c67f5e92b39efa1e
+        SEQUENCE
+          ObjectIdentifier authorityKeyIdentifier (2 5 29 35)
+          OCTETSTRING, encapsulates
+            SEQUENCE
+              [0] c22733c2040482bb42eeba63a6bc45a409817a31
+  SEQUENCE
+    ObjectIdentifier (1 3 101 112)
+  BITSTRING 00e8c404cdace199b6cb8a41cfe2fc7e..(total 65bytes)..2dd54ddcd1edc41fc55b990382a70b01

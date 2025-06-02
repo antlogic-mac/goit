@@ -1,0 +1,36 @@
+SEQUENCE
+  SEQUENCE
+    INTEGER 00
+    SEQUENCE
+      SET
+        SEQUENCE
+          ObjectIdentifier countryName (2 5 4 6)
+          PrintableString 'UA'
+      SET
+        SEQUENCE
+          ObjectIdentifier stateOrProvinceName (2 5 4 8)
+          UTF8String 'Kyiv'
+      SET
+        SEQUENCE
+          ObjectIdentifier localityName (2 5 4 7)
+          UTF8String 'Kyiv'
+      SET
+        SEQUENCE
+          ObjectIdentifier organizationName (2 5 4 10)
+          UTF8String 'Goit'
+      SET
+        SEQUENCE
+          ObjectIdentifier organizationalUnitName (2 5 4 11)
+          UTF8String 'IT'
+      SET
+        SEQUENCE
+          ObjectIdentifier commonName (2 5 4 3)
+          UTF8String 'Test Node Cert (acra-client)'
+    SEQUENCE
+      SEQUENCE
+        ObjectIdentifier (1 3 101 112)
+      BITSTRING 001a0f6d3033aed5d945a77d3dc4fa89..(total 33bytes)..5c2fa13b6b2fdf56b179d0d1af36f395
+    [0]
+  SEQUENCE
+    ObjectIdentifier (1 3 101 112)
+  BITSTRING 00a07aa9e3ac4de364b985e140939b61..(total 65bytes)..0a37afd48368f76da365b2ac198faf08

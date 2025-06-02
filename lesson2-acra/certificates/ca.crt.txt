@@ -1,0 +1,89 @@
+SEQUENCE
+  SEQUENCE
+    [0]
+      INTEGER 02
+    INTEGER 3d0581eee657ce678b3e6062e29fe69058fd4719
+    SEQUENCE
+      ObjectIdentifier (1 3 101 112)
+    SEQUENCE
+      SET
+        SEQUENCE
+          ObjectIdentifier countryName (2 5 4 6)
+          PrintableString 'UA'
+      SET
+        SEQUENCE
+          ObjectIdentifier stateOrProvinceName (2 5 4 8)
+          UTF8String 'Kyiv'
+      SET
+        SEQUENCE
+          ObjectIdentifier localityName (2 5 4 7)
+          UTF8String 'Kyiv'
+      SET
+        SEQUENCE
+          ObjectIdentifier organizationName (2 5 4 10)
+          UTF8String 'Goit'
+      SET
+        SEQUENCE
+          ObjectIdentifier organizationalUnitName (2 5 4 11)
+          UTF8String 'IT'
+      SET
+        SEQUENCE
+          ObjectIdentifier commonName (2 5 4 3)
+          UTF8String 'Test CA Cert'
+    SEQUENCE
+      UTCTime 250308153635Z
+      UTCTime 300308153635Z
+    SEQUENCE
+      SET
+        SEQUENCE
+          ObjectIdentifier countryName (2 5 4 6)
+          PrintableString 'UA'
+      SET
+        SEQUENCE
+          ObjectIdentifier stateOrProvinceName (2 5 4 8)
+          UTF8String 'Kyiv'
+      SET
+        SEQUENCE
+          ObjectIdentifier localityName (2 5 4 7)
+          UTF8String 'Kyiv'
+      SET
+        SEQUENCE
+          ObjectIdentifier organizationName (2 5 4 10)
+          UTF8String 'Goit'
+      SET
+        SEQUENCE
+          ObjectIdentifier organizationalUnitName (2 5 4 11)
+          UTF8String 'IT'
+      SET
+        SEQUENCE
+          ObjectIdentifier commonName (2 5 4 3)
+          UTF8String 'Test CA Cert'
+    SEQUENCE
+      SEQUENCE
+        ObjectIdentifier (1 3 101 112)
+      BITSTRING 0016735a32c3c028721b72ade5deaa8e..(total 33bytes)..151872158cee882886e82e1f216df493
+    [3]
+      SEQUENCE
+        SEQUENCE
+          ObjectIdentifier subjectKeyIdentifier (2 5 29 14)
+          OCTETSTRING, encapsulates
+            OCTETSTRING c22733c2040482bb42eeba63a6bc45a409817a31
+        SEQUENCE
+          ObjectIdentifier authorityKeyIdentifier (2 5 29 35)
+          OCTETSTRING, encapsulates
+            SEQUENCE
+              [0] c22733c2040482bb42eeba63a6bc45a409817a31
+        SEQUENCE
+          ObjectIdentifier basicConstraints (2 5 29 19)
+          BOOLEAN TRUE
+          OCTETSTRING, encapsulates
+            SEQUENCE
+              BOOLEAN TRUE
+        SEQUENCE
+          ObjectIdentifier subjectAltName (2 5 29 17)
+          OCTETSTRING, encapsulates
+            SEQUENCE
+              [2] localhost
+  SEQUENCE
+    ObjectIdentifier (1 3 101 112)
+  BITSTRING 007e549f05b104977f91653b1e32952f..(total 65bytes)..12e5b80315928cb7833eeba886b49b08
